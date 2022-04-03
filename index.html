@@ -9,6 +9,13 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <h2>Todo</h2>
+    <div ng-controller="TodoListController as todoList">
+        <ul>
+            <li ng-repeat="todo in todoList.todos">
+                {{ todo.text }}
+            </li>
+        </ul>
+    </div>
 </body>
 </html>
