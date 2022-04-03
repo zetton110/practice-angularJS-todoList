@@ -5,4 +5,7 @@ angular.module('todoApp',[])
             {text: 'learn AngularJS', done: true},
             {text: 'build an AngularJS app', done: false}
         ];
+        todoList.deleteTodo = function(index) {
+            todoList.todos.splice(index,1)
+        }
     });

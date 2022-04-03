@@ -13,7 +13,12 @@
     <div ng-controller="TodoListController as todoList">
         <ul>
             <li ng-repeat="todo in todoList.todos">
-                {{ todo.text }}
+                <label>
+                    {{ $index }}
+                    <button ng-click="todoList.deleteTodo($index)">delete</button>
+                    <input type="checkbox" ng-model="todo.done">
+                    <span>{{ todo.text }}</span>
+                </label>
             </li>
         </ul>
     </div>
